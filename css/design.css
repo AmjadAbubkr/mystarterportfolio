@@ -1,0 +1,481 @@
+/* global rules */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background-color: var(--alt-main-color);
+  font: 1em sans-serif;
+  text-transform: capitalize;
+}
+
+:root {
+  --main-color: #57a0fa;
+  --alt-main-color: #262a2e;
+}
+
+.container {
+  padding-left: 45px;
+  padding-right: 45px;
+  margin: 0 auto;
+}
+
+a {
+  text-decoration: none;
+  color: #57a0fa;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.main {
+  color: var(--main-color);
+  font-weight: bold;
+  text-align: center;
+  padding-bottom: 5px;
+  position: relative;
+}
+
+.main::before {
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 2px;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--main-color);
+}
+/* global rules */
+
+/* header */
+
+header {
+  background-color: var(--alt-main-color);
+  box-shadow: 0 6px 6px rgba(0, 0, 0, 0.25);
+  height: 70px;
+  z-index: 9;
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  top: 4px;
+  border-bottom: 2px solid #57a0fa;
+}
+
+header .container .logo a {
+  display: flex;
+  align-items: center;
+  font-weight: bolder;
+  font-size: 20px;
+  height: 60px;
+  color: var(--main-color);
+}
+
+header .container nav {
+  display: flex;
+}
+
+.menu {
+  position: absolute;
+  z-index: 9;
+  left: 57%;
+  top: 10.7%;
+  background: #57a0fa;
+  width: 363px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  transition: 0.5s;
+  display: none;
+}
+
+.menu #close {
+  display: flex;
+  flex-direction: column;
+  top: 15px;
+  position: absolute;
+  left: 80%;
+}
+
+.menu #close span:nth-child(1) {
+  background-color: #262a2e;
+  width: 25px;
+  height: 3px;
+  transform: rotate(45deg);
+}
+.menu #close span:nth-child(2) {
+  background-color: #262a2e;
+  width: 25px;
+  height: 3px;
+  transform: rotate(-45deg);
+  top: -3px;
+  position: relative;
+}
+
+.menu ul li a {
+  color: #262a2e;
+  font-weight: bold;
+  padding-bottom: 5px;
+}
+
+.menu ul li {
+  border-bottom: 2px solid;
+  padding: 7px;
+}
+
+header .container nav ul {
+  display: flex;
+}
+
+header .container nav ul li a {
+  padding: 20px;
+  font-size: 17px;
+  transition: 0.3s;
+  font-weight: bold;
+}
+
+header .container nav ul li a:hover {
+  border-bottom: 3px solid white;
+  color: white;
+  color: red;
+}
+
+header .container .burger-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  display: none;
+  right: 0;
+}
+
+header .container #burger-icon #a1 {
+  background-color: var(--main-color);
+  width: 25px;
+  height: 3px;
+  margin: 1px 0;
+  transition: 0.3s;
+  transition: 0.3s;
+}
+header .container #burger-icon #b2 {
+  background-color: var(--main-color);
+  width: 25px;
+  height: 3px;
+  margin: 1px 0;
+}
+header .container #burger-icon #c3 {
+  background-color: var(--main-color);
+  width: 25px;
+  height: 3px;
+  margin: 1px 0;
+  transition: 0.3s;
+}
+
+/* header */
+
+/* landing */
+.landing {
+  background-color: var(--alt-main-color);
+}
+
+.landing .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.landing .container .image {
+  display: flex;
+  flex: 1;
+  width: 40%;
+}
+
+.landing .container .image img {
+  width: 90%;
+  height: 80%;
+}
+
+.landing .container .text {
+  flex: 1;
+}
+
+.landing .container .text h2 {
+  letter-spacing: 1px;
+  color: var(--main-color);
+}
+
+.landing .container .text p {
+  font-weight: bold;
+  color: var(--main-color);
+  width: 600px;
+  letter-spacing: 2px;
+  line-height: 30px;
+}
+/* landing */
+
+/* services */
+.services {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background-color: black;
+}
+
+.services .container .cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 40px;
+  padding-top: 70px;
+  padding-bottom: 70px;
+}
+
+.services .container .cards .card .icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--alt-main-color);
+  border-radius: 50%;
+  border: 3px solid black;
+  width: 85px;
+  height: 85px;
+  position: absolute;
+  left: 38%;
+  font-size: 40px;
+  top: -32%;
+}
+
+.services .container .cards .card {
+  position: relative;
+  height: 200px;
+  background-color: var(--alt-main-color);
+  color: var(--main-color);
+  border-radius: 5px;
+}
+
+.services .container .cards .card h3 {
+  text-align: center;
+  letter-spacing: 1px;
+  margin: 40px 0px;
+}
+
+.services .container .cards .card p {
+  margin: 10px 20px 0px 20px;
+  letter-spacing: 1px;
+  line-height: 2;
+}
+/* services */
+
+/* About */
+.about {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.about .container p {
+  padding-top: 50px;
+  color: #e9e4e5;
+  letter-spacing: 1px;
+  line-height: 2;
+  /* font-weight: bold; */
+  text-align: center;
+}
+
+.about .container .sec .img img {
+  width: 80%;
+}
+.about .container .sec .img {
+  width: 65%;
+}
+
+.about .container .sec {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  flex-wrap: wrap;
+}
+
+.about .container .sec .content {
+  width: 35%;
+}
+.about .container .sec .content h3 {
+  text-align: center;
+  font-weight: bold;
+  color: var(--main-color);
+  font-size: 25px;
+}
+
+.about .container .skills {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding-top: 50px;
+}
+
+.about .container .skills img {
+  width: 50%;
+}
+.about .container .skills .skill {
+  width: 45%;
+}
+.about .container .skills .skill p {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.about .container .skills .skill p span {
+  width: 300px;
+  height: 15px;
+  background-color: var(--main-color);
+  position: relative;
+  flex: -1;
+  margin: 0 15px;
+}
+
+/* About */
+
+/* contact */
+.contact {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background-color: black;
+}
+
+.contact .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.contact .container .form {
+  display: flex;
+}
+
+.contact .container .form .one {
+  margin: 20px 20px 20px 0;
+  width: 200px;
+  height: 40px;
+  background: none;
+  outline: white;
+  border-radius: 10px;
+  color: white;
+}
+
+.contact .container .form .two {
+  background: none;
+  outline: white;
+  border-radius: 10px;
+  text-align: center;
+  color: white;
+  width: 600px;
+  height: 400px;
+}
+
+/* contact */
+
+/* responsive */
+
+@media (max-width: 300px) {
+  .container {
+    width: 250px;
+  }
+}
+@media (max-width: 590px) {
+  .container {
+    width: 530px;
+  }
+}
+@media (max-width: 990px) {
+  .container {
+    width: 930px;
+  }
+}
+@media (max-width: 768px) {
+  .container {
+    width: 760px;
+  }
+  header .container nav {
+    display: none;
+  }
+  header .container .burger-icon {
+    display: flex;
+  }
+  .landing .container .image {
+    display: none;
+  }
+  .landing .container .text {
+    text-align: center;
+    width: 650px;
+  }
+  .landing .container .text p {
+    width: inherit;
+  }
+  .services .container .cards {
+    gap: 70px;
+  }
+  .about .container .sec img {
+    display: none;
+  }
+  .about .container p {
+    padding-top: 0;
+  }
+  .about .container .skills img {
+    display: none;
+  }
+  .about .container .skills {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .contact .container img {
+    display: none;
+  }
+  .about .container .skills .skill {
+    width: 100%;
+  }
+  .about .container .sec .content {
+    width: 100%;
+  }
+}
+
+@media (max-width: 450px) {
+  .container {
+    width: 400px;
+  }
+  .menu {
+    top: 7%;
+    width: 178px;
+  }
+  .menu ul li {
+    padding: 7px 0;
+  }
+  .landing .container .text {
+    text-align: center;
+    width: 320px;
+  }
+  .services .container .cards {
+    gap: 90px;
+  }
+  .contact .container .form .two {
+    height: 200px;
+    width: 335px;
+  }
+  .about .container .skills .skill {
+    width: 100%;
+  }
+  .about .container .sec .content {
+    width: 100%;
+  }
+}
