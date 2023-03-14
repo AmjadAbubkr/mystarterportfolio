@@ -485,7 +485,7 @@ header .container #burger-icon #c3 {
 
 @media (max-width: 450px) {
   .container {
-    width: 435px;
+    width: 408px;
   }
   .landing .container .text p {
     width: 350px;
@@ -494,7 +494,7 @@ header .container #burger-icon #c3 {
 
 @media (max-width: 390px) {
   .container {
-    width: 395px;
+    width: 372px;
   }
   .landing .container .text p {
     width: 315px;
