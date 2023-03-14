@@ -1,12 +1,20 @@
-let list = document.getElementById("burger-icon");
+let list = document.getElementById("bars");
+let xMark = document.getElementById("xmark");
 
 list.onclick = function () {
   document.getElementById("menu").style.display = "-webkit-inline-box";
+  list.style.cssText =
+    "display: none; transition: 0.3s; color: #57a0fa; font-size: 20px;";
+  xMark.style.cssText =
+    "display: block; transform: rotate(0deg);color: #57a0fa; font-size: 25px;";
 };
 
-let close = document.getElementById("close");
+let close = document.getElementById("xmark");
 close.onclick = function () {
   document.getElementById("menu").style.display = "none";
+  xMark.style.cssText = "display: none; transition: 0.3s;";
+  // xMark.style.display = "none";
+  list.style.display = "block";
 };
 
 let body = document.querySelector("body");

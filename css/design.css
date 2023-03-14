@@ -450,13 +450,13 @@ header .container #burger-icon #c3 {
   }
 }
 
-@media (max-width: 450px) {
+@media (max-width: 576px) {
   .container {
-    width: 400px;
+    width: 562px;
   }
   .menu {
-    top: 7%;
-    width: 178px;
+    top: 10%;
+    width: 240px;
   }
   .menu ul li {
     padding: 7px 0;
@@ -464,6 +464,9 @@ header .container #burger-icon #c3 {
   .landing .container .text {
     text-align: center;
     width: 320px;
+  }
+  .landing .container .text p {
+    width: 485px;
   }
   .services .container .cards {
     gap: 90px;
@@ -477,5 +480,26 @@ header .container #burger-icon #c3 {
   }
   .about .container .sec .content {
     width: 100%;
+  }
+}
+
+@media (max-width: 450px) {
+  .container {
+    width: 435px;
+  }
+  .landing .container .text p {
+    width: 350px;
+  }
+}
+
+@media (max-width: 390px) {
+  .container {
+    width: 395px;
+  }
+  .landing .container .text p {
+    width: 315px;
+  }
+  .contact .container .form .two {
+    width: 305px;
   }
 }
